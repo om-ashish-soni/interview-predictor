@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERVIEW PREDICTOR</title>
+    <script type="text/javascript" src="script.js"> </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+
+
+</head>
+<style>
+    body {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 40%;
+        font-size: 20px;
+        padding: 5px;
+
+        background-color: olivedrab;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .filler {
+        align-items: left;
+        text-align: left;
+    }
+        body{
+            background-color:cornsilk;
+            font-size:20px;
+            font-family: 'Century Gothic';
+        }
+        
+        h1{
+            /* font-family: Papyrus; */
+            color: white;
+        }
+        #logout_btn,#signin_btn,#news_add_submit_btn,#news_add_submit_btn0,#login_redirect_btn,#go_back_btn,#crt_news_channel_advertise_btn,#crt_tv_channel_advertise_btn,#predict_btn{
+            color:white;
+            background-color:orange;
+            border-radius:10px;
+            outline:none;
+            border:none;
+            width:40%;
+            font-size:24px;
+        }
+        #logout_btn{
+            width:10%;
+            background-color:tomato;
+            color:white;
+        }
+        #Email_Id_Input,#Password_Input,#Business_Name_Input{
+            outline:none;
+            border:none;     
+            border-bottom:2px solid black;
+            font-size:20px;
+        }
+</style>
+
+<body>
+    <center>
+        <h1 style="color:orangered">Interview Predictor model</h1>
+        <h2 style="color:blueviolet">Decision Tree Learning Supervised Classification Based Model</h2>
+        <h2 style="color:green"> Made by Om Ashish Soni</h2>
+        <table class="fillers">
+
+            <tr>
+                <td>
+                    <label>Company </label>
+
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <select name="company" id="company">
+                        <option value="0">mastercard</option>
+                        <option value="1">apple</option>
+                        <option value="2">amazon</option>
+                        <option value="3">netflix</option>
+                        <option value="4">google</option>
+                        <option value="5">microsoft</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label> Communication skills </label>
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <select name="communication" id="communication">
+                        <option value="0">low</option>
+                        <option value="1">medium</option>
+                        <option value="2">high</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label> Projects </label>
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <select name="project" id="project">
+                        <option value="0">good</option>
+                        <option value="1">very good</option>
+                        <option value="2">advanced</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>
+                    <label> DSA </label>
+                </td>
+                <td>
+                    :
+                </td>
+                <td>
+                    <select name="dsa" id="dsa">
+                        <option value="0">beginner</option>
+                        <option value="1">enough</option>
+                        <option value="2">ultra</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <br />
+        
+
+        <button id="predict_btn" onclick="judge(event)" type="submit">
+            Predict
+        </button>
+        </form>
+        <h1 id="output">
+
+        </h1>
+
+
+</body>
+
+</html>
